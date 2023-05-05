@@ -9,8 +9,8 @@
             Nav header start
         ***********************************-->
         <div class="nav-header">
-            <a href="{{ url('/administration/home') }}" class="brand-logo">
-                <h3>hello </h3>
+            <a href="{{ url('/patient/home') }}" class="brand-logo">
+                <h3>MDP</h3>
             </a>
 
             <div class="nav-control">
@@ -109,16 +109,13 @@
                                     <i class="mdi mdi-account"></i>
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-right">
-                                    <a href="./app-profile.html" class="dropdown-item">
+                                    <a href="{{ url('/patient/profile') }}l" class="dropdown-item">
                                         <i class="icon-user"></i>
                                         <span class="ml-2">Profile </span>
                                     </a>
-                                    <a href="./email-inbox.html" class="dropdown-item">
-                                        <i class="icon-envelope-open"></i>
-                                        <span class="ml-2">Inbox </span>
-                                    </a>
+                                   
                                     
-                                    <a href="{{ url('/administration/logout') }}"
+                                    <a href="{{ url('/patient/logout') }}"
                                         onclick="event.preventDefault();
                                                  document.getElementById('logout-form').submit();">
                                          <i class="icon-key"></i>
@@ -149,7 +146,7 @@
             <div class="quixnav-scroll">
                 <ul class="metismenu" id="menu">
                     <li class="nav-label first">Main Menu</li>
-                    <li><a href="{{ url('/user/home') }}"  href="javascript:void()" aria-expanded="false"><i
+                    <li><a href="{{ url('/patient/home') }}"  href="javascript:void()" aria-expanded="false"><i
                                 class="icon icon-single-04"></i><span class="nav-text">Dashboard</span></a>
                        
                     </li>
@@ -157,7 +154,7 @@
                     <li><a class="has-arrow" href="javascript:void()" aria-expanded="false"><i
                                 class="icon icon-app-store"></i><span class="nav-text">Master</span></a>
                         <ul aria-expanded="false">
-                            <li><a href="{{ url('/user/test') }}">Profile</a></li>
+                            <li><a href="{{ url('/patient/profile') }}">View Profile</a></li>
                           
                          
                         </ul>
@@ -165,9 +162,9 @@
                     <li><a class="has-arrow" href="javascript:void()" aria-expanded="false"><i
                                 class="icon icon-chart-bar-33"></i><span class="nav-text">Service</span></a>
                         <ul aria-expanded="false">
-                            <li><a href="./chart-flot.html">Doctors</a></li>
-                            <li><a href="./chart-flot.html">Hospital</a></li>
-                            <li><a href="./chart-flot.html">Meditions</a></li>
+                            <li><a href="{{ url('/patient/doctor') }}">Doctors</a></li>
+                            <!-- <li><a href="{{ url('/patient/hospital') }}">Hospital</a></li> -->
+                            <li><a href="{{ url('/patient/medition') }}">Meditions</a></li>
 
                           
                         </ul>
@@ -175,8 +172,8 @@
                     <li><a class="has-arrow" href="javascript:void()" aria-expanded="false"><i
                                 class="icon icon-world-2"></i><span class="nav-text"> Report</span></a>
                         <ul aria-expanded="false">
-                            <li><a href="./ui-accordion.html">View Report</a></li>
-                            <li><a href="./ui-accordion.html">Download Report</a></li>
+                            <li><a href="{{ url('/patient/viewReport') }}">View Report</a></li>
+                            <li><a href="{{ url('/patient/downReport') }}">Download Report</a></li>
 
                           
                         </ul>
@@ -184,8 +181,8 @@
                     <li><a class="has-arrow" href="javascript:void()" aria-expanded="false"><i
                                 class="icon icon-world-2"></i><span class="nav-text">Suggestion</span></a>
                         <ul aria-expanded="false">
-                            <li><a href="./ui-accordion.html">All Doctors List</a></li>
-                            <li><a href="./ui-accordion.html">All Hospital List</a></li>
+                            <li><a href="{{ url('/patient/allDoctorList') }}">All Doctors List</a></li>
+                            <!-- <li><a href="{{ url('/patient/allHospitalList') }}">All Hospital List</a></li> -->
 
                           
                         </ul>

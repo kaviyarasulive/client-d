@@ -80,7 +80,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                Muliple disease prediction using machine learning
+               Diseases Diagnosis in Medical Databases based on Clustering Techniques Using Machine Learning
                 </div>
 
                 <div class="links">

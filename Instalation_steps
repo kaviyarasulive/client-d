@@ -1,0 +1,16 @@
+follow the link https://5balloons.info/install-laravel-5-7-xampp-windows/
+
+XAMPP instalation completed
+
+open cmd to the project directory
+
+1. composer i
+
+2.  npm install && npm run dev
+
+create Database name "disease"
+
+3. php artisan migrate:fresh --seed
+
+4. php artisan serve
+

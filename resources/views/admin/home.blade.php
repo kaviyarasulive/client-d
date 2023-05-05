@@ -6,8 +6,7 @@
 @section('content')
 
 
-
-        <div class="content-body">
+<div class="content-body">
             <!-- row -->
             <div class="container-fluid">
                 <div class="row">
@@ -28,7 +27,7 @@
                         <div class="card">
                             <div class="stat-widget-two card-body">
                                 <div class="stat-content">
-                                    <div class="stat-text">Patient</div>
+                                    <div class="stat-text">Total User</div>
                                     <div class="stat-digit">78</div>
                                 </div>
                                 <div class="progress">
@@ -162,7 +161,6 @@
         <!--**********************************
             Content body end
         ***********************************-->
-
 
 
 @endsection

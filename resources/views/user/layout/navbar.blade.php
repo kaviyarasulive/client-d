@@ -10,7 +10,7 @@
         ***********************************-->
         <div class="nav-header">
             <a href="{{ url('/administration/home') }}" class="brand-logo">
-                <h3>hello </h3>
+                <h3>MDP</h3>
             </a>
 
             <div class="nav-control">
@@ -118,14 +118,14 @@
                                         <span class="ml-2">Inbox </span>
                                     </a>
                                     
-                                    <a href="{{ url('/administration/logout') }}"
+                                    <a href="{{ url('/user/logout') }}"
                                         onclick="event.preventDefault();
                                                  document.getElementById('logout-form').submit();">
                                          <i class="icon-key"></i>
                                         <span class="ml-2">Logout </span>
                                     </a>
 
-                                    <form id="logout-form" action="{{ url('/patient/logout') }}" method="POST">
+                                    <form id="logout-form" action="{{ url('/user/logout') }}" method="POST">
                                         {{ csrf_field() }}
                                     </form>
                                 
@@ -157,35 +157,43 @@
                     <li><a class="has-arrow" href="javascript:void()" aria-expanded="false"><i
                                 class="icon icon-app-store"></i><span class="nav-text">Test</span></a>
                         <ul aria-expanded="false">
-                            <li><a href="{{ url('/user/test') }}">Test 1</a></li>
-                          
+                            <li><a href="{{ url('/user/Opthalmology') }}">Opthalmology</a></li>
+                            <li><a href="{{ url('/user/Oncologist') }}">Oncologist</a></li>
+                            <li><a href="{{ url('/user/Pulmonology') }}">Pulmonology</a></li>
+                            <li><a href="{{ url('/user/Rheumatology ') }}">Rheumatology </a></li>
+                            <li><a href="{{ url('/user/Neurologisty	') }}">Neurologisty</a></li>
+
                          
                         </ul>
                     </li>
                     <li><a class="has-arrow" href="javascript:void()" aria-expanded="false"><i
                                 class="icon icon-chart-bar-33"></i><span class="nav-text">Result</span></a>
                         <ul aria-expanded="false">
-                            <li><a href="./chart-flot.html">Result</a></li>
+                            <li><a href="{{ url('/user/result') }}">Result</a></li>
                           
                         </ul>
                     </li>
-                    <li><a class="has-arrow" href="javascript:void()" aria-expanded="false"><i
+                    <!-- <li><a class="has-arrow" href="javascript:void()" aria-expanded="false"><i
                                 class="icon icon-world-2"></i><span class="nav-text"> Report</span></a>
                         <ul aria-expanded="false">
-                            <li><a href="./ui-accordion.html">View Report</a></li>
-                            <li><a href="./ui-accordion.html">Download Report</a></li>
+                            <li><a href="{{ url('/user/ViewReport') }}">View Report</a></li>
+                            <li><a href="{{ url('/user/download') }}">Download Report</a></li>
 
                           
                         </ul>
-                    </li>
+                    </li> -->
                     <li><a class="has-arrow" href="javascript:void()" aria-expanded="false"><i
                                 class="icon icon-world-2"></i><span class="nav-text">Suggestion</span></a>
                         <ul aria-expanded="false">
-                            <li><a href="./ui-accordion.html">Hospital</a></li>
-                            <li><a href="./ui-accordion.html">Doctors</a></li>
+                            <!-- <li><a href="{{ url('/user/hospital') }}">Hospital</a></li> -->
+                            <li><a href="{{ url('/user/doctors') }}">Doctors</a></li>
 
                           
                         </ul>
+                    </li>
+                    <li><a href="{{ url('/user/profile') }}"  href="javascript:void()" aria-expanded="false"><i
+                                class="icon icon-single-04"></i><span class="nav-text">Profile</span></a>
+                       
                     </li>
                   
                 </ul>

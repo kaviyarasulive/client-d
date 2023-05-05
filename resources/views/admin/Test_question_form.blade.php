@@ -6,8 +6,7 @@
 @section('content')
 
 
-
-        <!--**********************************
+  <!--**********************************
             Content body start
         ***********************************-->
         <div class="content-body">
@@ -84,6 +83,45 @@
                             </div>
                         </div>
                     </div>
+                    <div class="col-lg-12">
+                        <div class="card">
+                            <div class="card-header flex-row flex-nowrap" >
+                                <h4 class="card-title">Questions Table</h4>
+                            </div>
+                            <div class="card-body">
+                                <div class="table-responsive">
+                                    <table class="table table-bordered table-striped verticle-middle table-responsive-sm">
+                                        <thead>
+                                            <tr>                                                
+                                               <th scope="col">S.no</th>
+                                                <th scope="col">Question</th>
+                                                <th scope="col">Option A</th>
+                                                <th scope="col">Option B</th>
+                                                <th scope="col">Option C</th>
+                                                <th scope="col">Delete</th>
+
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                        @foreach ($question as $key => $value)
+
+                                            <tr>
+                                                <td>{{$value ->id}}</td>
+                                                <td>{{$value->Insert_question}}</td>
+                                                <td>{{$value->Option_A}}</td>
+                                                <td>{{$value->Option_B}}</td>
+                                                <td>{{$value->Option_C}}</td>
+                                                <td><button type="button" class="btn btn-danger"> <i class="fa fa-close"></i></span></button></td>
+
+                                            </tr>
+                                           @endforeach
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
 @endsection
 

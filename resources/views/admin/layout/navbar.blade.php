@@ -10,7 +10,7 @@
         ***********************************-->
         <div class="nav-header">
             <a href="{{ url('/admin/home') }}" class="brand-logo">
-                <h3>hello </h3>
+                <h3>MDP</h3>
             </a>
 
             <div class="nav-control">
@@ -167,7 +167,7 @@
                     <li><a class="has-arrow" href="javascript:void()" aria-expanded="false"><i
                                 class="icon icon-app-store"></i><span class="nav-text">View</span></a>
                         <ul aria-expanded="false">
-                            <li><a href="{{ url('/admin/question') }}">Details</a></li>
+                            <li><a href="{{ url('/admin/administrationView') }}">Details</a></li>
                           
                          
                         </ul>
@@ -176,7 +176,7 @@
                     <li><a class="has-arrow" href="javascript:void()" aria-expanded="false"><i
                                 class="icon icon-app-store"></i><span class="nav-text">View</span></a>
                         <ul aria-expanded="false">
-                            <li><a href="{{ url('/admin/question') }}">Details</a></li>
+                            <li><a href="{{ url('/admin/userView') }}">Details</a></li>
                           
                          
                         </ul>
@@ -185,12 +185,12 @@
                     <li><a class="has-arrow" href="javascript:void()" aria-expanded="false"><i
                                 class="icon icon-app-store"></i><span class="nav-text">View</span></a>
                         <ul aria-expanded="false">
-                            <li><a href="{{ url('/admin/question') }}">Details</a></li>
+                            <li><a href="{{ url('/admin/patientView') }}">Details</a></li>
                           
                          
                         </ul>
                     </li>
-                    <li class="nav-label">Documentation</li>
+                    <!-- <li class="nav-label">Documentation</li>
                     <li><a class="has-arrow" href="javascript:void()" aria-expanded="false"><i
                                 class="icon icon-chart-bar-33"></i><span class="nav-text">Result</span></a>
                         <ul aria-expanded="false">
@@ -206,12 +206,11 @@
 
                           
                         </ul>
-                    </li>
+                    </li> -->
                     <li><a class="has-arrow" href="javascript:void()" aria-expanded="false"><i
                                 class="icon icon-world-2"></i><span class="nav-text">Suggestion</span></a>
                         <ul aria-expanded="false">
-                            <li><a href="./ui-accordion.html">Hospital</a></li>
-                            <li><a href="./ui-accordion.html">Doctors</a></li>
+                            <li><a href="{{ url('/admin/doctors') }}">Doctors</a></li>
 
                           
                         </ul>
