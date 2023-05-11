@@ -66,6 +66,7 @@ class RegisterController extends Controller
         return Patient::create([
             'name' => $data['name'],
             'email' => $data['email'],
+            'phone' => $data['phone'],
             'password' => bcrypt($data['password']),
         ]);
     }

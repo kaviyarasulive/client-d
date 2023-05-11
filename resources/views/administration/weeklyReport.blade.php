@@ -23,7 +23,7 @@
                     <div class="col-sm-6 p-md-0 justify-content-sm-end mt-2 mt-sm-0 d-flex">
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item"><a href="javascript:void(0)">Table</a></li>
-                            <li class="breadcrumb-item active"><a href="javascript:void(0)">Datatable</a></li>
+                            <li class="breadcrumb-item active"><a href="javascript:void(0)">Patient table</a></li>
                         </ol>
                     </div>
                 </div>
@@ -34,7 +34,7 @@
                     <div class="col-12">
                         <div class="card">
                             <div class="card-header">
-                                <h4 class="card-title">Basic Datatable</h4>
+                                <h4 class="card-title">Patient Datatable</h4>
                             </div>
                             <div class="card-body">
                                 <div class="table-responsive">
@@ -49,30 +49,30 @@
                                         <thead class="thead-primary">
                                             <tr>
                                                 <th scope="col">#</th>
-                                                <th scope="col">First</th>
-                                                <th scope="col">Last</th>
-                                                <th scope="col">Handle</th>
+                                                <th scope="col">Name</th>
+                                                <th scope="col">Email</th>
+                                                <th scope="col">Phone</th>
+                                                <th scope="col">File</th>
                                             </tr>
                                         </thead>
                                         <tbody>
+                                        @foreach ($patient as $key => $value)
+
                                             <tr>
-                                                <th>1</th>
-                                                <td>Mark</td>
-                                                <td>Otto</td>
-                                                <td>@mdo</td>
+                                                <th>{{ $value ->id }}</th>
+                                                <td>{{ $value ->name }}</td>
+                                                <td>{{ $value ->email }}</td>
+                                                <td>{{ $value ->phone }}</td>
+                                                <td>
+                                                    <form action="{{ url('/administration/submitReport/'.$value ->id) }}" method="POST" enctype="multipart/form-data">
+                                                        @csrf
+                                                        <input type="file" name="report" id="">
+                                                        <input type="submit" value="Submit">
+                                                    </form>
+                                                </td>
                                             </tr>
-                                            <tr>
-                                                <th>2</th>
-                                                <td>Jacob</td>
-                                                <td>Thornton</td>
-                                                <td>@fat</td>
-                                            </tr>
-                                            <tr>
-                                                <th>3</th>
-                                                <td>Larry</td>
-                                                <td>the Bird</td>
-                                                <td>@twitter</td>
-                                            </tr>
+                                            
+                                        @endforeach
                                         </tbody>
                                     </table>
                                 </div>

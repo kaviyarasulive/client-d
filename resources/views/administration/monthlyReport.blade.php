@@ -48,31 +48,17 @@
                                     <table class="table primary-table-bordered">
                                         <thead class="thead-primary">
                                             <tr>
-                                                <th scope="col">#</th>
-                                                <th scope="col">First</th>
-                                                <th scope="col">Last</th>
-                                                <th scope="col">Handle</th>
+                                                <th scope="col">Report</th>
+                                                <th scope="col">Download</th>
                                             </tr>
                                         </thead>
                                         <tbody>
+                                            @foreach($patient as $key => $value)
                                             <tr>
-                                                <th>1</th>
-                                                <td>Mark</td>
-                                                <td>Otto</td>
-                                                <td>@mdo</td>
+                                                <td>{{$value ->report}}</td>
+                                                <td><a href="{{ url('/administration/download') }}">Download</a></td>
                                             </tr>
-                                            <tr>
-                                                <th>2</th>
-                                                <td>Jacob</td>
-                                                <td>Thornton</td>
-                                                <td>@fat</td>
-                                            </tr>
-                                            <tr>
-                                                <th>3</th>
-                                                <td>Larry</td>
-                                                <td>the Bird</td>
-                                                <td>@twitter</td>
-                                            </tr>
+                                            @endforeach
                                         </tbody>
                                     </table>
                                 </div>

@@ -27,17 +27,16 @@ class DatabaseSeeder extends Seeder
         DB::table('users')->insert([
             'name' => 'demo',
             'email' => 'info@admin.com',
+            'phone' => '0987654321',
             'password' => bcrypt('123456'),
         ]);
 
         DB::table('patients')->insert([
             'name' => 'demo',
             'email' => 'info@admin.com',
+            'phone' => '0987654321',
             'password' => bcrypt('123456'),
         ]);
-
-
-
 
         DB::table('doctors')->insert([
             'name' => 'Dr. Niranjan Naik',

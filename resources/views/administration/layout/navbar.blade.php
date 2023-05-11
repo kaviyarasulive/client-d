@@ -166,8 +166,8 @@
                     <li><a class="has-arrow" href="javascript:void()" aria-expanded="false"><i
                                 class="icon icon-world-2"></i><span class="nav-text">Report</span></a>
                         <ul aria-expanded="false">
-                            <li><a href="{{ url('/administration/weeklyReaport') }}">Weekly Report</a></li>
-                            <li><a href="{{ url('/administration/monthlyReport') }}">Monthly report</a></li>
+                            <li><a href="{{ url('/administration/weeklyReaport') }}">Add Report</a></li>
+                            <li><a href="{{ url('/administration/monthlyReport') }}">View report</a></li>
                             
 
                         </ul>

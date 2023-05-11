@@ -11,11 +11,11 @@ Route::get('/home', function () {
 })->name('home');
 
 
-
+    Route::post('/submitReport/{id}', 'Administration\AdministrationController@submitReport')->name('submitReport');
     Route::get('/profile', 'Administration\AdministrationController@Profile')->name('Profile');
     Route::get('/calender', 'Administration\AdministrationController@calender')->name('calender');
     Route::get('/weeklyReaport', 'Administration\AdministrationController@weeklyReaport')->name('weeklyReaport');
-    Route::get('/monthlyReport', 'Administration\AdministrationController@monthlyReport')->name('weeklyReaport');
+    Route::get('/monthlyReport', 'Administration\AdministrationController@monthlyReport')->name('monthlyReport');
     Route::get('/booking', 'Administration\AdministrationController@booking')->name('booking');
     Route::get('/view', 'Administration\AdministrationController@view')->name('view');
     Route::post('/logout', 'AdministrationAuth\LoginController@logout')->name('logout');
