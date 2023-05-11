@@ -56,7 +56,7 @@
                                             @foreach($patient as $key => $value)
                                             <tr>
                                                 <td>{{$value ->report}}</td>
-                                                <td><a href="{{ url('/administration/download') }}">Download</a></td>
+                                                <td><a href="{{ url('/administration/download/'.$value->id) }}">Download</a></td>
                                             </tr>
                                             @endforeach
                                         </tbody>

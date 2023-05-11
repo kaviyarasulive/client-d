@@ -13,7 +13,7 @@ use App\oncologist;
 use App\Pulmonology;
 use App\Rheumatology;
 use App\opthalmology;
-
+use Response;
 use App\User;
 use App\Administration;
 class AdministrationController extends Controller
@@ -73,4 +73,12 @@ class AdministrationController extends Controller
         
     }
 
+    function download($id) {
+        $patient = Patient::find($id);
+        $report = $patient->report;
+        return Response::make(file_get_contents('documents/'.$report), 200, [
+            'content-type'=>'application/pdf',
+        ]);
+
+    }
 }

@@ -10,7 +10,7 @@ Route::get('/home', function () {
     return view('administration.home');
 })->name('home');
 
-
+    Route::get('/download/{id}', 'Administration\AdministrationController@download')->name('download');
     Route::post('/submitReport/{id}', 'Administration\AdministrationController@submitReport')->name('submitReport');
     Route::get('/profile', 'Administration\AdministrationController@Profile')->name('Profile');
     Route::get('/calender', 'Administration\AdministrationController@calender')->name('calender');
